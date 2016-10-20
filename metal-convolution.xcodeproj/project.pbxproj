@@ -12,6 +12,8 @@
 		CB20EB3D1DB7F82100AE55A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB20EB3B1DB7F82100AE55A5 /* Main.storyboard */; };
 		CB20EB3F1DB7F82100AE55A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB20EB3E1DB7F82100AE55A5 /* Assets.xcassets */; };
 		CB20EB421DB7F82100AE55A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB20EB401DB7F82100AE55A5 /* LaunchScreen.storyboard */; };
+		CB20EB4A1DB7FD9700AE55A5 /* MakeConv.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20EB491DB7FD9700AE55A5 /* MakeConv.swift */; };
+		CBC8C29C1DB83FA100329A81 /* Naranja3.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC8C29B1DB83FA100329A81 /* Naranja3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		CB20EB3E1DB7F82100AE55A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB20EB411DB7F82100AE55A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB20EB431DB7F82100AE55A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB20EB491DB7FD9700AE55A5 /* MakeConv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeConv.swift; sourceTree = "<group>"; };
+		CBC8C29B1DB83FA100329A81 /* Naranja3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Naranja3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 			children = (
 				CB20EB371DB7F82100AE55A5 /* AppDelegate.swift */,
 				CB20EB391DB7F82100AE55A5 /* ViewController.swift */,
+				CB20EB491DB7FD9700AE55A5 /* MakeConv.swift */,
 				CB20EB3B1DB7F82100AE55A5 /* Main.storyboard */,
 				CB20EB3E1DB7F82100AE55A5 /* Assets.xcassets */,
 				CB20EB401DB7F82100AE55A5 /* LaunchScreen.storyboard */,
+				CBC8C29B1DB83FA100329A81 /* Naranja3.png */,
 				CB20EB431DB7F82100AE55A5 /* Info.plist */,
 			);
 			path = "metal-convolution";
@@ -91,11 +97,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = madlab;
 				TargetAttributes = {
 					CB20EB331DB7F82100AE55A5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8UTZF6J49P;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -123,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB20EB421DB7F82100AE55A5 /* LaunchScreen.storyboard in Resources */,
+				CBC8C29C1DB83FA100329A81 /* Naranja3.png in Resources */,
 				CB20EB3F1DB7F82100AE55A5 /* Assets.xcassets in Resources */,
 				CB20EB3D1DB7F82100AE55A5 /* Main.storyboard in Resources */,
 			);
@@ -135,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB20EB4A1DB7FD9700AE55A5 /* MakeConv.swift in Sources */,
 				CB20EB3A1DB7F82100AE55A5 /* ViewController.swift in Sources */,
 				CB20EB381DB7F82100AE55A5 /* AppDelegate.swift in Sources */,
 			);
@@ -176,8 +186,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -222,8 +234,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -242,6 +256,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -251,10 +266,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "metal-convolution/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.madlab.metal-convolution";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -262,10 +281,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "metal-convolution/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.madlab.metal-convolution";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -288,6 +311,7 @@
 				CB20EB481DB7F82100AE55A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
