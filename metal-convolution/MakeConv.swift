@@ -46,16 +46,16 @@ open class MakeConv {
     public init(device: MTLDevice, weights: [Float], bias: [Float]) {
         print("creating convolution kernel")
         self.device = device
-        conv = makeConv(device, inDepth: 3, outDepth: 1, weights: weights, bias: bias)
-        commandQueue = device.makeCommandQueue()
+        self.conv = makeConv(device, inDepth: 3, outDepth: 1, weights: weights, bias: bias)
+        self.commandQueue = device.makeCommandQueue()
     }
     
     open func run(from inputImage: MPSImage) -> MPSImage {
         print("running convolution")
-        let commandBuffer = commandQueue.makeCommandBuffer()
+        let commandBuffer = self.commandQueue.makeCommandBuffer()
         let outputImgDesc = MPSImageDescriptor(channelFormat: .unorm8, width: 10, height: 10, featureChannels: 1)
         let outputImage = MPSImage(device: self.device, imageDescriptor: outputImgDesc)
-        conv.encode(commandBuffer: commandBuffer, sourceImage: inputImage, destinationImage: outputImage)
+        self.conv.encode(commandBuffer: commandBuffer, sourceImage: inputImage, destinationImage: outputImage)
         commandBuffer.commit()
         commandBuffer.waitUntilCompleted()
         print("finished running convolution")

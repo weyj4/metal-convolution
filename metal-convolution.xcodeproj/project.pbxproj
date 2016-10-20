@@ -13,6 +13,7 @@
 		CB20EB3F1DB7F82100AE55A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB20EB3E1DB7F82100AE55A5 /* Assets.xcassets */; };
 		CB20EB421DB7F82100AE55A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB20EB401DB7F82100AE55A5 /* LaunchScreen.storyboard */; };
 		CB20EB4A1DB7FD9700AE55A5 /* MakeConv.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20EB491DB7FD9700AE55A5 /* MakeConv.swift */; };
+		CB9B34C81DB868BC00C6E4C9 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9B34C71DB868BC00C6E4C9 /* Test.swift */; };
 		CBC8C29C1DB83FA100329A81 /* Naranja3.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC8C29B1DB83FA100329A81 /* Naranja3.png */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		CB20EB411DB7F82100AE55A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB20EB431DB7F82100AE55A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB20EB491DB7FD9700AE55A5 /* MakeConv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeConv.swift; sourceTree = "<group>"; };
+		CB9B34C71DB868BC00C6E4C9 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		CBC8C29B1DB83FA100329A81 /* Naranja3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Naranja3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 			children = (
 				CB20EB371DB7F82100AE55A5 /* AppDelegate.swift */,
 				CB20EB391DB7F82100AE55A5 /* ViewController.swift */,
+				CB9B34C71DB868BC00C6E4C9 /* Test.swift */,
 				CB20EB491DB7FD9700AE55A5 /* MakeConv.swift */,
 				CB20EB3B1DB7F82100AE55A5 /* Main.storyboard */,
 				CB20EB3E1DB7F82100AE55A5 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB20EB4A1DB7FD9700AE55A5 /* MakeConv.swift in Sources */,
+				CB9B34C81DB868BC00C6E4C9 /* Test.swift in Sources */,
 				CB20EB3A1DB7F82100AE55A5 /* ViewController.swift in Sources */,
 				CB20EB381DB7F82100AE55A5 /* AppDelegate.swift in Sources */,
 			);
