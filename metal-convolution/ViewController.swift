@@ -56,6 +56,10 @@ class ViewController: UIViewController {
             }
         }
         
+        let outputArray = runConvolution(on: "Naranja3.png", with: kernel)
+        
+        print("outputArray", outputArray)
+        
     }
 
     override func didReceiveMemoryWarning() {
