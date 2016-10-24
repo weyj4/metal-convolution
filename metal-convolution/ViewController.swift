@@ -45,29 +45,16 @@ class ViewController: UIViewController {
             return MPSImage(texture: texture, featureChannels: channels)
         }
         
-        func runConvolution(on image: String, with kernel: MakeConv) -> MPSImage? {
+        func runConvolution(on image: String, with kernel: MakeConv) -> [Float]? {
             if let texture = loadTexture(named: image) {
                 let inputImage = createImage(from: texture, channels: 3)
-                let outputImage = kernel.run(from: inputImage)
-                return outputImage
+                let outputImageArray = kernel.run(from: inputImage)
+                return outputImageArray
             } else {
                 print("Error: could not loadTexture")
                 return nil
             }
         }
-        
-        func test(png: String) -> UnsafeMutableRawPointer? {
-            var pointer: UnsafeMutableRawPointer?
-            if let new = runConvolution(on: png, with: kernel) {
-                let newTexture = new.texture
-                let check = Test(output: newTexture)
-                pointer = check.run(x: 10, y: 10)
-            }
-            return pointer
-        }
-        
-        let bytes = test(png: "Naranja3.png")!
-        print("got bytes\n", bytes)
         
     }
 

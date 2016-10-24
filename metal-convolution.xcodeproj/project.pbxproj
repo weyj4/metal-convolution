@@ -15,6 +15,7 @@
 		CB20EB4A1DB7FD9700AE55A5 /* MakeConv.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20EB491DB7FD9700AE55A5 /* MakeConv.swift */; };
 		CB9B34C81DB868BC00C6E4C9 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9B34C71DB868BC00C6E4C9 /* Test.swift */; };
 		CBC8C29C1DB83FA100329A81 /* Naranja3.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC8C29B1DB83FA100329A81 /* Naranja3.png */; };
+		CBD51EC91DBEC437003CF81B /* MPSImageToFloatArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD51EC81DBEC437003CF81B /* MPSImageToFloatArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CB20EB491DB7FD9700AE55A5 /* MakeConv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeConv.swift; sourceTree = "<group>"; };
 		CB9B34C71DB868BC00C6E4C9 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		CBC8C29B1DB83FA100329A81 /* Naranja3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Naranja3.png; sourceTree = "<group>"; };
+		CBD51EC81DBEC437003CF81B /* MPSImageToFloatArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPSImageToFloatArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				CB20EB391DB7F82100AE55A5 /* ViewController.swift */,
 				CB9B34C71DB868BC00C6E4C9 /* Test.swift */,
 				CB20EB491DB7FD9700AE55A5 /* MakeConv.swift */,
+				CBD51EC81DBEC437003CF81B /* MPSImageToFloatArray.swift */,
 				CB20EB3B1DB7F82100AE55A5 /* Main.storyboard */,
 				CB20EB3E1DB7F82100AE55A5 /* Assets.xcassets */,
 				CB20EB401DB7F82100AE55A5 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 			files = (
 				CB20EB4A1DB7FD9700AE55A5 /* MakeConv.swift in Sources */,
 				CB9B34C81DB868BC00C6E4C9 /* Test.swift in Sources */,
+				CBD51EC91DBEC437003CF81B /* MPSImageToFloatArray.swift in Sources */,
 				CB20EB3A1DB7F82100AE55A5 /* ViewController.swift in Sources */,
 				CB20EB381DB7F82100AE55A5 /* AppDelegate.swift in Sources */,
 			);

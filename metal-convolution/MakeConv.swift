@@ -42,23 +42,28 @@ open class MakeConv {
     let conv: MPSCNNConvolution
     let commandQueue: MTLCommandQueue
     let device: MTLDevice
+    let softmax: MPSCNNSoftMax
     
     public init(device: MTLDevice, weights: [Float], bias: [Float]) {
         print("creating convolution kernel")
         self.device = device
-        self.conv = makeConv(device, inDepth: 3, outDepth: 1, weights: weights, bias: bias)
-        self.commandQueue = device.makeCommandQueue()
+        conv = makeConv(device, inDepth: 3, outDepth: 1, weights: weights, bias: bias)
+        commandQueue = device.makeCommandQueue()
+        softmax = MPSCNNSoftMax(device: device)
     }
     
-    open func run(from inputImage: MPSImage) -> MPSImage {
+    open func run(from inputImage: MPSImage) -> [Float] {
         print("running convolution")
         let commandBuffer = self.commandQueue.makeCommandBuffer()
         let outputImgDesc = MPSImageDescriptor(channelFormat: .unorm8, width: 10, height: 10, featureChannels: 1)
+        let outputArrayDesc = MPSImageDescriptor(channelFormat: .unorm8, width: 10, height: 10, featureChannels: 1)
         let outputImage = MPSImage(device: self.device, imageDescriptor: outputImgDesc)
-        self.conv.encode(commandBuffer: commandBuffer, sourceImage: inputImage, destinationImage: outputImage)
+        let outputArray = MPSImage(device: self.device, imageDescriptor: outputArrayDesc)
+        conv.encode(commandBuffer: commandBuffer, sourceImage: inputImage, destinationImage: outputImage)
+        softmax.encode(commandBuffer: commandBuffer, sourceImage: outputImage, destinationImage: outputArray)
         commandBuffer.commit()
         commandBuffer.waitUntilCompleted()
         print("finished running convolution")
-        return outputImage
+        return outputArray.toFloatArray()
     }
 }
