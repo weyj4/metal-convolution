@@ -55,8 +55,8 @@ open class MakeConv {
     open func run(from inputImage: MPSImage) -> [Float] {
         print("running convolution")
         let commandBuffer = self.commandQueue.makeCommandBuffer()
-        let outputImgDesc = MPSImageDescriptor(channelFormat: .unorm8, width: 10, height: 10, featureChannels: 1)
-        let outputArrayDesc = MPSImageDescriptor(channelFormat: .unorm8, width: 10, height: 10, featureChannels: 1)
+        let outputImgDesc = MPSImageDescriptor(channelFormat: .float16, width: 10, height: 10, featureChannels: 1)
+        let outputArrayDesc = MPSImageDescriptor(channelFormat: .float16, width: 10, height: 10, featureChannels: 1)
         let outputImage = MPSImage(device: self.device, imageDescriptor: outputImgDesc)
         let outputArray = MPSImage(device: self.device, imageDescriptor: outputArrayDesc)
         conv.encode(commandBuffer: commandBuffer, sourceImage: inputImage, destinationImage: outputImage)
